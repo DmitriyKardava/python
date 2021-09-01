@@ -12,6 +12,8 @@ for _i in range(len(my_list)):
         if my_list[_i].isdigit():
             while len(my_list[_i]) < 2:
                 my_list[_i] = '0' + my_list[_i]
-        my_list[_i] = '"' + _sign + my_list[_i] + '"'
+            my_list[_i] = '"' + _sign + my_list[_i] + '"'
+        elif _sign:
+            my_list[_i] = _sign + my_list[_i]
 print(' '.join(my_list))
 print(id(my_list))
